@@ -55,7 +55,7 @@ To run the tests:
 
 - Open your terminal;
 
-- Go to application folder;
+- Go to the application
 
 - run `rspec`
 
@@ -85,7 +85,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- 
+- Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
 
 
 ## 📝 License
