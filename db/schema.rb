@@ -10,30 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_11_202802) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_11_223224) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "groups", force: :cascade do |t|
+    t.string "name"
     t.string "icon"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
-    t.string "name"
     t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
-  create_table "groups_trades", id: false, force: :cascade do |t|
+  create_table "groups_trades", force: :cascade do |t|
     t.bigint "group_id", null: false
     t.bigint "trade_id", null: false
+    t.index ["group_id"], name: "index_groups_trades_on_group_id"
+    t.index ["trade_id"], name: "index_groups_trades_on_trade_id"
   end
 
   create_table "trades", force: :cascade do |t|
-    t.decimal "amount"
+    t.string "name"
+    t.float "amount"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
-    t.string "name"
+    t.bigint "group_id", null: false
+    t.index ["group_id"], name: "index_trades_on_group_id"
     t.index ["user_id"], name: "index_trades_on_user_id"
   end
 
@@ -51,5 +55,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_11_202802) do
   end
 
   add_foreign_key "groups", "users"
+  add_foreign_key "groups_trades", "groups"
+  add_foreign_key "groups_trades", "trades"
+  add_foreign_key "trades", "groups"
   add_foreign_key "trades", "users"
 end

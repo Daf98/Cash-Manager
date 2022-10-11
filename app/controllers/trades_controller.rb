@@ -4,8 +4,9 @@ class TradesController < ApplicationController
 
   # GET /trades or /trades.json
   def index
-    @trades = Trade.all.order(created_at: :desc)
-    @group = Group.find_by(params[:id])
+    @group = Group.find(params[:group_id])
+    @id = @group.id
+    @trades = Trade.where(group_id: @id)
   end
 
   # GET /trades/1 or /trades/1.json
@@ -21,8 +22,9 @@ class TradesController < ApplicationController
 
   # POST /trades or /trades.json
   def create
-    @trade = Trade.new(trade_params)
-    @group = Group.find_by(params[:id])
+    @trade = Trade.create(trade_params)
+    @group = Group.find(params[:group_id])
+    @trade.group_id = @group.id
     @trade.user = current_user
     respond_to do |format|
       if @trade.save

@@ -1,8 +1,10 @@
 class CreateTrades < ActiveRecord::Migration[7.0]
   def change
     create_table :trades do |t|
-      t.integer :author_id
-      t.decimal :amount
+      t.string :name
+      t.float :amount
+      t.references :user, null: false, foreign_key: true
+
 
       t.timestamps
     end
