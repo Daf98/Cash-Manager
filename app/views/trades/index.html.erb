@@ -6,9 +6,9 @@
   <% @trades.each do |trade| %>
     <%= render trade %>
     <p>
-      <%= link_to "Show this trade", trade %>
+      <%= link_to "Show this trade", group_trade_path(id: trade.id) %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New trade", new_trade_path %>
+<%= link_to "New trade", new_group_trade_path %>

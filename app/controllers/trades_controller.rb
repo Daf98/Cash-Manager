@@ -5,6 +5,7 @@ class TradesController < ApplicationController
   # GET /trades or /trades.json
   def index
     @trades = Trade.all
+    @group = Group.find_by(params[:id])
   end
 
   # GET /trades/1 or /trades/1.json
@@ -21,10 +22,11 @@ class TradesController < ApplicationController
   # POST /trades or /trades.json
   def create
     @trade = Trade.new(trade_params)
+    @group = Group.find_by(params[:id])
     @trade.user = current_user
     respond_to do |format|
       if @trade.save
-        format.html { redirect_to trade_url(@trade), notice: 'Trade was successfully created.' }
+        format.html { redirect_to group_trades_path, notice: 'Trade was successfully created.' }
         format.json { render :show, status: :created, location: @trade }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -35,9 +37,10 @@ class TradesController < ApplicationController
 
   # PATCH/PUT /trades/1 or /trades/1.json
   def update
+    @group = Group.find_by(params[:id])
     respond_to do |format|
       if @trade.update(trade_params)
-        format.html { redirect_to trade_url(@trade), notice: 'Trade was successfully updated.' }
+        format.html { redirect_to group_trades_path, notice: 'Trade was successfully updated.' }
         format.json { render :show, status: :ok, location: @trade }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,7 +54,7 @@ class TradesController < ApplicationController
     @trade.destroy
 
     respond_to do |format|
-      format.html { redirect_to trades_url, notice: 'Trade was successfully destroyed.' }
+      format.html { redirect_to group_trades_url, notice: 'Trade was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
