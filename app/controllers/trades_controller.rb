@@ -4,7 +4,7 @@ class TradesController < ApplicationController
 
   # GET /trades or /trades.json
   def index
-    @trades = Trade.all
+    @trades = Trade.all.order(created_at: :desc)
     @group = Group.find_by(params[:id])
   end
 

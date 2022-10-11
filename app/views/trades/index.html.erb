@@ -1,14 +1,19 @@
+<div>
+  <%= link_to "Back", groups_path, class: "back-button" %>
+</div>
 <p style="color: green"><%= notice %></p>
 
 <h1>Trades</h1>
-
+<% sum = 0 %>
 <div id="trades">
   <% @trades.each do |trade| %>
     <%= render trade %>
     <p>
       <%= link_to "Show this trade", group_trade_path(id: trade.id) %>
     </p>
+  <% sum += trade.amount %>
   <% end %>
 </div>
+<h3>Total amount: $ <%= sum %></h3>
 
-<%= link_to "New trade", new_group_trade_path %>
+<%= link_to "Add a new trade", new_group_trade_path %>
