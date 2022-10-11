@@ -68,6 +68,6 @@ class TradesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def trade_params
-    params.require(:trade).permit(:author_id, :amount)
+    params.require(:trade).permit(:name, :amount)
   end
 end

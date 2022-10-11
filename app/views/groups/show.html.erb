@@ -1,6 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @group %>
+    <h2><%= @group.name %></h2>
+    <img src="<%= @group.icon %>">
 
 <div>
   <%= link_to "Edit this group", edit_group_path(@group) %> |

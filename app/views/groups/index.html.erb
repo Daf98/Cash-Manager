@@ -4,7 +4,8 @@
 
 <div id="groups">
   <% @groups.each do |group| %>
-    <%= render group %>
+    <h2><%= group.name %></h2>
+    <img src="<%= group.icon %>">
     <p>
       <%= link_to "Show this group", group %>
     </p>
