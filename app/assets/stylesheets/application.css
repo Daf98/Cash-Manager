@@ -34,6 +34,12 @@ a {
   cursor: pointer;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
 .back-button {
   border: 1px solid black;
 }
@@ -49,6 +55,7 @@ a {
 .topnav {
   overflow: hidden;
   position: relative;
+  left: 0;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -57,7 +64,7 @@ a {
 }
 
 /* Style navigation menu links */
-.topnav a {
+.topnav a, button {
   color: white;
   padding: 14px 16px;
   text-decoration: none;
@@ -76,4 +83,9 @@ a {
 /* Style the active link (or home/logo) */
 .active {
   color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
 }
