@@ -26,6 +26,7 @@ class TradesController < ApplicationController
     @group = Group.find(params[:group_id])
     @trade.group_id = @group.id
     @trade.user = current_user
+    @group.trades.push(@trade)
     respond_to do |format|
       if @trade.save
         format.html { redirect_to group_trades_path, notice: 'Trade was successfully created.' }

@@ -8,6 +8,7 @@
   <%= link_to group.name, group_trades_path(group.id) %>
   </h2>
   <img src="<%= group.icon %>">
+  <p>Trades: $ <%= group.trades.sum('amount') %>
 
   <% end %>
 </div>
