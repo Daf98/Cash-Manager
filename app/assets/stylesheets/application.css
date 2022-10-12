@@ -13,16 +13,17 @@
  *= require_tree .
  *= require_self
  */
- @font-face {
+@font-face {
   font-family: 'Proxima Nova';
   src: url('Proxima-Nova.ttf');
 }
+
 * {
   text-decoration: none;
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  font-family: "Proxima Nova"
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 img {
@@ -43,6 +44,7 @@ a {
 }
 
 /* Navbar */
+
 /* Style the navigation menu */
 .topnav {
   overflow: hidden;
@@ -64,9 +66,6 @@ a {
 }
 
 /* Style the hamburger menu */
-.topnav a.icon {
-
-}
 
 /* Add a grey background color on mouse-over */
 .topnav a:hover {
