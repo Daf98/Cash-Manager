@@ -37,8 +37,12 @@ button {
   cursor: pointer;
 }
 
+a:link {
+  color: #ababab;
+}
+
 a:visited {
-  color: inherit;
+  color: white;
 }
 
 button {
@@ -48,7 +52,7 @@ button {
 }
 
 .back-button {
-  border: 1px solid black;
+  padding: 0 1rem;
 }
 
 .main {
@@ -106,7 +110,8 @@ button {
 
 /* Groups index */
 
-.group-index {
+.group-index,
+.trade-index {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,7 +127,8 @@ button {
   color: #434b54;
 }
 
-#groups {
+#groups,
+#trades {
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -130,7 +136,8 @@ button {
   padding-top: 1rem;
 }
 
-#group {
+#group,
+#trade {
   display: flex;
   background-color: white;
   border: 1px solid #f1f1f1;
@@ -149,7 +156,7 @@ button {
   font-weight: normal;
 }
 
-.new-group-button {
+.new-button {
   width: 100%;
   color: white;
   text-align: center;
@@ -158,6 +165,10 @@ button {
   font-size: 1.5rem;
 }
 
-.new-group-button:visited {
+.new-button:visited {
   color: white;
+}
+
+.total-amount {
+  padding: 1rem;
 }
