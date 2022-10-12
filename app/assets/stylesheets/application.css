@@ -172,3 +172,24 @@ button {
 .total-amount {
   padding: 1rem;
 }
+
+/* Forms */
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #ababab;
+}
+
+.form-button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
