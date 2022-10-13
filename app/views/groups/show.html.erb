@@ -12,8 +12,5 @@
 <% if can? :update, @group %>
   <%= link_to "Edit this group", edit_group_path(@group), class: "second" %>
   <% end %>
-  <% if can? :destroy, @group %>
-  <%= button_to "Destroy this group", @group, method: :delete, class: "second" %>
-  <% end %>
 </div>
 </div>
