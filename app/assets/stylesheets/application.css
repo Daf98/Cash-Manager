@@ -181,3 +181,9 @@ input {
   cursor: pointer;
   padding: 0.5rem 1rem;
 }
+
+.trade-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

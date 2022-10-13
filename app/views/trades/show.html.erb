@@ -1,10 +1,17 @@
 <p style="color: green"><%= notice %></p>
-
-<%= render @trade %>
-
 <div>
-  <%= link_to "Edit this trade", edit_group_trade_path(@trade) %> |
-  <%= link_to "Back to trades", group_trades_path %>
+  <%= link_to "Back", group_trades_path, class: "back-button main" %>
+</div>
+<div id="trades">
+<div id="trade">
+    <p>
+      <%= @trade.name %>
+    </p>
+    <p class="trade-sum text">$<%= @trade.amount %></p>
+  </div>
 
-  <%= button_to "Destroy this trade", group_trade_path(id: @trade.id), method: :delete %>
+<div class="trade-buttons">
+  <%= link_to "Edit this trade", edit_group_trade_path(@trade), class: "second" %>
+  <%= button_to "Destroy this trade", group_trade_path(id: @trade.id), method: :delete, class: "second" %>
+</div>
 </div>

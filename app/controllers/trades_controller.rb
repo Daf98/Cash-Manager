@@ -10,7 +10,9 @@ class TradesController < ApplicationController
   end
 
   # GET /trades/1 or /trades/1.json
-  def show; end
+  def show
+    @trade = Trade.find(params[:id])
+  end
 
   # GET /trades/new
   def new
