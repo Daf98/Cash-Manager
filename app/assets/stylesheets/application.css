@@ -187,3 +187,11 @@ input {
   flex-direction: column;
   align-items: center;
 }
+
+.splash-buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  text-align: center;
+}
