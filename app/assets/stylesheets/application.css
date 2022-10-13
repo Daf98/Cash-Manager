@@ -196,7 +196,7 @@ input {
   text-align: center;
 }
 
-#back-button {
+.back-button-div {
   width: 100%;
   background-color: #3778c2;
 }
