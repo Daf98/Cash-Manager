@@ -1,7 +1,6 @@
-<div>
-  <%= link_to "Back", groups_path, class: "back-button main" %>
+<div id="back-button">
+  <%= link_to "<", groups_path, class: "back-button main" %>
 </div>
-<p style="color: green"><%= notice %></p>
 <div class="trade-index">
 <h1 class="index-header text">Trades</h1>
 <% sum = 0 %>
@@ -20,3 +19,4 @@
 
 <%= link_to "Add a new trade", new_group_trade_path, class: 'new-button second' %>
 </div>
+<p style="color: green"><%= notice %></p>
