@@ -8,8 +8,8 @@
 <div id="trades">
   <% @trades.each do |trade| %>
   <div id="trade">
-    <p>
-      <%= link_to trade.name, group_trade_path(id: trade.id), class: 'text' %>
+    <p class = "text">
+      <%= trade.name %>
     </p>
     <p class="trade-sum text">$<%= trade.amount %></p>
   <% sum += trade.amount %>

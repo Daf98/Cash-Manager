@@ -8,9 +8,4 @@
   <img src="<%= @group.icon %>">  
   <h2><%= @group.name %></h2>
 </div>
-<div class="trade-buttons">
-<% if can? :update, @group %>
-  <%= link_to "Edit this group", edit_group_path(@group), class: "second" %>
-  <% end %>
-</div>
 </div>

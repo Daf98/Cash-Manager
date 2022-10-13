@@ -60,9 +60,12 @@ To run the tests:
 - run `rspec`
 
 ## Live demo
-Coming soon...
+[Heroku](https://murmuring-savannah-48570.herokuapp.com/)
 
-## Authors
+## Video demo
+
+
+## Author
 
 👤 **Dafne Azzolina**
 
