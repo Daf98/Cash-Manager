@@ -1,12 +1,7 @@
 <div>
-  <%= link_to "Back", group_trades_path, class: "back-button" %>
+  <%= link_to "Back", group_trades_path, class: "back-button main" %>
 </div>
-<h1>New trade</h1>
+<h1 class="index-header text">New trade</h1>
 
 <%= render "form", trade: @trade %>
 
-<br>
-
-<div>
-  <%= link_to "Back to trades", group_trades_path %>
-</div>

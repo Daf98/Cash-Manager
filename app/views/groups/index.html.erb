@@ -7,8 +7,8 @@
   <% @groups.each do |group| %>
 <div id="group">
 <img src="<%= group.icon %>">
-  <h2 class="group-name text">
-  <%= link_to group.name, group_trades_path(group.id) %>
+  <h2>
+  <%= link_to group.name, group_trades_path(group.id), class: 'text' %>
   </h2>
   
   <p class="trade-sum text">Total: $<%= group.trades.sum('amount') %>

@@ -37,14 +37,6 @@ button {
   cursor: pointer;
 }
 
-a:link {
-  color: #ababab;
-}
-
-a:visited {
-  color: white;
-}
-
 button {
   border: none;
   background-color: transparent;
@@ -150,10 +142,6 @@ button {
   font-size: 1.5rem;
   font-weight: bold;
   color: #434b54;
-}
-
-.group-name {
-  font-weight: normal;
 }
 
 .new-button {
