@@ -63,7 +63,7 @@ To run the tests:
 [Heroku](https://murmuring-savannah-48570.herokuapp.com/)
 
 ## Video demo
-
+[Loom](https://www.loom.com/share/507623c27fd84a91b2f1a7b56eeea7e0)
 
 ## Author
 
