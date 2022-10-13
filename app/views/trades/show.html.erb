@@ -2,6 +2,7 @@
 <div>
   <%= link_to "Back", group_trades_path, class: "back-button main" %>
 </div>
+<h1 class="index-header text">Detail</h1>
 <div id="trades">
 <div id="trade">
     <p>
@@ -11,7 +12,11 @@
   </div>
 
 <div class="trade-buttons">
+  <% if can? :update, @trade %>
   <%= link_to "Edit this trade", edit_group_trade_path(@trade), class: "second" %>
+  <% end %>
+  <% if can? :destroy, @trade %>
   <%= button_to "Destroy this trade", group_trade_path(id: @trade.id), method: :delete, class: "second" %>
+  <% end %>
 </div>
 </div>
