@@ -60,7 +60,7 @@ To run the tests:
 - run `rspec`
 
 ## Live demo
-[Heroku](https://murmuring-savannah-48570.herokuapp.com/)
+[Render](https://cash-manager.onrender.com/)
 
 ## Video demo
 [Loom](https://www.loom.com/share/507623c27fd84a91b2f1a7b56eeea7e0)
